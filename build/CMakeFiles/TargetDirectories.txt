@@ -1,0 +1,3 @@
+/workspaces/virtual_machine/build/CMakeFiles/rebuild_cache.dir
+/workspaces/virtual_machine/build/CMakeFiles/edit_cache.dir
+/workspaces/virtual_machine/build/CMakeFiles/PointCloudApp.dir
