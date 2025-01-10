@@ -1,0 +1,22 @@
+pcl::PointCloud<pcl::PointXYZ>::Ptr generatePointCloud() {
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
+    cloud->width = 100;  // Number of points
+    cloud->height = 1;   // Single row
+    cloud->is_dense = false;
+    cloud->points.resize(cloud->width * cloud->height);
+
+    // Generate some points
+    for (size_t i = 0; i < cloud->points.size(); ++i) {
+        cloud->points[i].x = rand() % 10;
+        cloud->points[i].y = rand() % 10;
+        cloud->points[i].z = rand() % 10;
+    }
+
+    return cloud;
+}
+
+int main(int argc, char *argv[]) {
+    auto cloud = generatePointCloud();  // Generate sample point cloud
+    cout << "Point cloud generated with " << cloud->points.size() << " points." << endl;
+    // Process the point cloud as usual
+}
